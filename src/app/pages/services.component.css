@@ -1,0 +1,71 @@
+a{
+  text-align: center;
+}
+h1{
+  margin-left: 1rem;
+}
+
+.center{
+  margin: auto;
+  width: 40%;
+  text-align: center;
+}
+
+.show__grid{
+  width: 40rem;
+  height: 7rem;
+  padding: 1rem;
+}
+
+.hlp__links{
+  width: 90%;
+  height: 7rem;
+  display: grid;
+  grid-template-columns: repeat(15, [col-start] 8rem);
+}
+
+.links__sqr{
+  height: 6rem;
+  width: 6rem;
+  border: 0.3rem solid #5ca2e4;
+  border-radius: 10%;
+  border-bottom-style: groove;
+  border-right-style: groove;
+  border-left-style: ridge;
+  border-top-style: ridge;
+  box-shadow: 2px 3px 3px rgba(49, 49, 49, 0.486);
+  justify-content: center;
+}
+
+#workday{
+  background-image: url('../../assets/workday.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+}
+
+#octane{
+  background-image: url('../../assets/octane.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: black;
+}
+
+#vshpere{
+  background-image: url('../../assets/vshpere.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #52719e;
+
+}
+
+#self-service{
+  background-image: url('../../assets/IPself-service.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+}

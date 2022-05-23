@@ -1,0 +1,91 @@
+
+<mat-drawer-container class="container">
+  <mat-drawer #drawer>
+    <mat-list>
+      <mat-list-item>
+        <div class="hasIcon">
+          <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+          <h3 [routerLink]="['/home']" routerLinkActive="active">
+           Home
+          </h3>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item >
+        <div class="hasIcon">
+          <mat-icon aria-hidden="false" aria-label="Example home icon">room</mat-icon>
+          <h3 [routerLink]="['/home/ipservice']" routerLinkActive="active">
+            <a> Self Service IP </a>
+          </h3>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <div class="hasIcon">
+          <mat-icon aria-hidden="false" aria-label="Example home icon"><div id="vshpere">none</div></mat-icon>
+          <h3 [routerLink]="['/home/vsphere']" routerLinkActive="active">
+            <a> VShpere</a>
+          </h3>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <div class="hasIcon">
+          <mat-icon aria-hidden="false" aria-label="Example home icon"><div id="suse">none</div></mat-icon>
+          <h3 [routerLink]="['/home/suse']" routerLinkActive="active">
+            <a> SUSE Linux </a>
+          </h3>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <div class="hasIcon">
+          <mat-icon aria-hidden="false" aria-label="Example home icon"><div id="redHat">none</div></mat-icon>
+          <h3 [routerLink]="['/home/redhat']" routerLinkActive="active">
+            <a> RedHat </a>
+          </h3>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+
+    <div class="tutorial_home">
+      <button mat-icon-button color="accent" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="center">
+        <h1>Home Portal</h1>
+        
+      </div>
+      <mat-tab-group mat-stretch-tabs 
+        class="example-stretched-tabs mat-elevation-z1"
+        id="hometabs">
+        <mat-tab label="Linux commands">          
+          <div class="center">
+            <!-- <h1>Helpful Linux commands</h1>
+            <p></p> -->
+            <h2>How to extract a tar ball</h2>
+            <hr>
+            <p>tar xvfz "fileName"</p>
+            <h2>How to remove files</h2>
+            <hr>
+            <p>rm "fileName"</p>              
+            <p>rm *tar.gz "fileName" (deletes multiple files with the same file extensions)</p>
+          </div>
+          
+        </mat-tab>
+        <mat-tab label="Second">
+          <ng-template matTabContent>
+            
+          </ng-template>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+    
+
+  </mat-drawer-content>
+  </mat-drawer-container>
+
+
+

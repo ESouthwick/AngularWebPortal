@@ -1,0 +1,101 @@
+.container {
+  width: 101%;
+  height: 90%;
+  /* left: px; */
+  /* border: tomato 2px solid; */
+}
+
+.tutorial_home{
+  height: 100%;
+  width: 100%;
+  /* background-color: rgba(240, 124, 0, 0.926); */
+}
+
+.center{
+  margin: auto;
+  width: 40%;
+  text-align: center;
+}
+
+.hasIcon{
+  width: 80%;
+  text-align: left;
+  margin-left: 15%;
+}
+
+#hometabs{
+  margin: 0rem 8rem;
+}
+
+#vshpere{
+  background-image: url('../../assets/vshpere.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #52719e;
+
+}
+
+#redHat{
+  background-image: url('../../assets/redhat.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #52719e;
+
+}
+
+#suse{
+  background-image: url('../../assets/sus.PNG');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #52719e;
+
+}
+
+mat-drawer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+mat-drawer {
+  width: 15rem;
+  background-color: #41688c;
+  color: white;
+}
+
+mat-icon{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #41688c;
+  padding: .7rem;
+  color: white;
+}
+
+mat-flat-button{
+  background: #2b5277;
+}
+
+mat-list-item{
+  color: white;
+}
+
+/* mat-tab-group{
+  background-color:#41688c;
+} */
+
+mat-tab-header{
+  background-color:#41688c;
+}
+
+a{
+  color: rgb(0, 0, 0);
+}
+
+h3{
+  color: #F97924;
+}
+
+

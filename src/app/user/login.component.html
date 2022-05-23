@@ -1,0 +1,32 @@
+<!-- 
+<mat-toolbar class="toolbarColor">
+  <a href="/"><div class="logo-image"></div></a>
+
+  <span class="example-spacer"></span>
+</mat-toolbar> -->
+
+<div class="topLeft">
+  <div class='login'>
+
+    <mat-label>Login</mat-label>
+    <hr>
+    <form novalidate
+    (ngSubmit)="login()"
+    [formGroup]="loginForm">
+
+      <mat-form-field  class="userName">
+        <mat-label>Username</mat-label>
+        <input matInput autofocus ="" formControlName="userName">
+      </mat-form-field>
+      <mat-form-field class="password">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password">
+      </mat-form-field>    
+      <button mat-raised-button type="submit"
+        [disabled]="!loginForm.valid"
+        (click)="login()">Submit
+      </button>
+
+    </form>
+  </div>
+</div>

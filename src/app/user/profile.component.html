@@ -1,0 +1,33 @@
+<div class="profile__info">
+
+  <mat-accordion class="example-headers-align">
+    <mat-expansion-panel *ngFor="let profile of profiles">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{profile.username}}
+        </mat-panel-title>
+        <mat-panel-title>
+          {{profile.firstName}}
+        </mat-panel-title>
+        <mat-panel-title>
+          {{profile.lastName}}
+        </mat-panel-title>
+        <mat-panel-description>
+          {{profile.email}}
+          <mat-icon>account_circle</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+        <a mat-raised-button
+        routerLink="/user/editProfile/{{profile.id}}">
+        Edit</a>
+        <a mat-raised-button
+        (click)="onDeleteClicked(profile.id)">
+        Delete Profile</a>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <div class="center">
+    <a class="addNewUser" mat-raised-button [routerLink]="['/user/addProfile']"
+    routerLinkActive="active">Create User</a>
+  </div>
+</div>
+

@@ -1,0 +1,32 @@
+
+.topLeft{
+  position: relative;
+  margin: 3%;
+  width: 13rem;
+  background-color: rgb(230, 230, 230);
+  box-shadow: -.2em 0 .4em gray
+}
+
+.login{
+  padding: 1rem;
+  width: 11.2rem;
+}
+
+.toolbarColor{
+  background-color: #244666;
+}
+
+.logo-image{
+  background-image: url('../../assets/microfocuslogo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #244666;
+  height: 3.5rem;
+  width: 16.5rem;
+}
+
+button{
+  background-color: #244666;
+  color: white;
+}

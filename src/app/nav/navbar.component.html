@@ -1,0 +1,23 @@
+
+
+    <mat-toolbar class="toolbarColor">
+      <a href="/"><div class="logo-image"></div></a>
+
+      <span class="example-spacer"></span>
+      <!-- <div *ngIf="user"> -->
+        <button mat-icon-button class="example-icon" 
+        aria-label="Example icon-button with home icon" 
+        [routerLink]="['/home']" routerLinkActive="active">
+        <mat-icon>home</mat-icon></button>
+
+        <button mat-icon-button class="example-icon" 
+        aria-label="Example icon-button with explore icon" 
+        [routerLink]="['/services']" routerLinkActive="active">
+        <mat-icon>explore</mat-icon></button>
+
+        <button mat-icon-button class="example-icon" 
+        aria-label="Example icon-button with account_circle icon" 
+        [routerLink]="['/user/profile']" routerLinkActive="active">
+        <mat-icon>account_circle</mat-icon></button>
+      <!-- </div> -->
+    </mat-toolbar>

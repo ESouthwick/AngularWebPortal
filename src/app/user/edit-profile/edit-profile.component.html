@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="center">
+  <h2>Edit Profile</h2>
+  <app-profile-data-form
+      buttonText="Edit Profile"
+      [currentId]="profile.id"
+      [currentUsername]="profile.username"
+      [currentFirstName]="profile.firstName"
+      [currentLastName]="profile.lastName"
+      [currentEmail]="profile.email"
+      (onSubmit)="onSubmit($event)"></app-profile-data-form>
+</div></div>

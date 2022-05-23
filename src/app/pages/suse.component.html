@@ -1,0 +1,73 @@
+<mat-drawer-container class="container">
+  <mat-drawer #drawer>
+    <mat-list>
+      <mat-list-item>
+        <div class="hasIcon">
+          <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+          <h3 [routerLink]="['/home']" routerLinkActive="active">
+           <a>Home</a>
+          </h3>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item >
+        <div class="hasIcon">
+          <mat-icon aria-hidden="false" aria-label="Example home icon">room</mat-icon>
+          <h3 [routerLink]="['/home/ipservice']" routerLinkActive="active">
+            <a> Self Service IP </a>
+          </h3>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <div class="hasIcon">
+          <mat-icon aria-hidden="false" aria-label="Example home icon"><div id="vshpere">none</div></mat-icon>
+          <h3 [routerLink]="['/home/vsphere']" routerLinkActive="active">
+            <a> VShpere</a>
+          </h3>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <div class="hasIcon">
+          <mat-icon aria-hidden="false" aria-label="Example home icon"><div id="suse">none</div></mat-icon>
+          <h3 [routerLink]="['/home/suse']" routerLinkActive="active">
+            SUSE Linux
+          </h3>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <div class="hasIcon">
+          <mat-icon aria-hidden="false" aria-label="Example home icon"><div id="redHat">none</div></mat-icon>
+          <h3 [routerLink]="['/home/redhat']" routerLinkActive="active">
+            <a> RedHat </a>
+          </h3>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+
+    <!-- <mat-tab-group>
+      <mat-tab label="Self Serve IP"> Content 1 </mat-tab>
+      <mat-tab label="Start-up VM"> Content 2 </mat-tab>
+      <mat-tab label="VM Templates"> Content 3 </mat-tab>
+      <mat-tab label="NAM Setup"> Content 4 </mat-tab>
+    </mat-tab-group> -->
+
+    <div class="tutorial_home">
+      <button mat-icon-button color="accent" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="center">
+        <h1>Suse Linux</h1>
+        <p>
+          SLES is an OS that we use for testing our product. Here is the file for
+          setting up your own VM with the SLES OS
+        </p>
+      </div>
+    </div>
+
+  </mat-drawer-content>
+</mat-drawer-container>
