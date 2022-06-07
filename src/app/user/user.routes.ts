@@ -12,6 +12,7 @@ export const userRoutes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'addProfile', component: AddProfileComponent },
   { path: 'editProfile/:id', component: EditProfileComponent },
+  { path: '', component: LoginComponent }
 
 ]
 @NgModule({

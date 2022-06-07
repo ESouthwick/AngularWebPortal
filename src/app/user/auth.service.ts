@@ -28,7 +28,7 @@ export class AuthService implements OnInit {
       if(profile.username == userName && this.loginPassword == password){
         this.currentUser = profile;
         console.log("User Authenticated");
-        console.log(this.currentUser);
+        // console.log(this.currentUser);
         return true;
       }
     }
@@ -36,12 +36,11 @@ export class AuthService implements OnInit {
     return false;
   }
 
-  isAuthenticated() {
-    return !!this.currentUser;
-  }
-
-  updateCurrentUser(firstName:string, lastName:string){
-    this.currentUser.firstName = firstName
-    this.currentUser.lastName = lastName
+  isAdmin() {
+    if(this.currentUser.username == 'Admin'){
+      return true;
+    } else{
+      return false;
+    }
   }
 }

@@ -13,6 +13,7 @@ import { ServicesComponent } from './pages/services.component';
 import { AuthService } from './user/auth.service';
 import { Error404Component } from './errors/404.component';
 import { DataService } from './data.service';
+import { CardsComponent } from './cards/cards.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { DataService } from './data.service';
     AppComponent,
     NavBarComponent,
     ServicesComponent,
-    Error404Component
+    Error404Component,
+    CardsComponent
   ],
   imports: [
     BrowserModule,

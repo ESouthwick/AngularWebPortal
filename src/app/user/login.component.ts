@@ -30,10 +30,10 @@ export class LoginComponent implements OnInit{
 
 
   login(){
-    console.log(this.loginForm.value);
+    // console.log(this.loginForm.value);
 
     if(this.authService.loginUser(this.loginForm.value['userName'], this.loginForm.value['password'])){
-      this.router.navigate(['home']);
+      this.router.navigate(['user/profile']);
     }
 
   }

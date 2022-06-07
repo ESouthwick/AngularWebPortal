@@ -14,7 +14,7 @@ export const homeRoutes: Routes = [
   { path: 'redhat', component: RedHatComponent },
   { path: 'suse', component: SuseComponent },
   { path: 'vsphere', component: VSphereComponent},
-  { path: '', component: HomeComponent }
+  { path: 'home', component: HomeComponent }
 
 ]
 @NgModule({

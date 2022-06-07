@@ -60,17 +60,169 @@
       <button mat-icon-button color="accent" (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-      <div class="center">
-        <h1>IP Services</h1>
-          <p>In order to work with Virtual Machines "VMs",
+
+      <h1 class="center">IP Services</h1>
+      <mat-tab-group mat-stretch-tabs
+      class="example-stretched-tabs mat-elevation-z1"
+      id="hometabs">
+      <mat-tab label="Tutorial">
+        <div class="center">
+          <div class="cardContainer">
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>1. Click on DNS: Create Zone</mat-card-title>
+              </mat-card-header>
+              <img mat-card-image src="../../assets/SSIP1.png" >
+              <mat-card-content>
+                <p>
+                  * In the DNS_Zone field enter dom######.lab this number should end
+                  in 00 like 030500 not 030504 and the number is specific to the user
+                  look for an email with the information for vlabs do not use the numbers
+                  used in this tutorial.
+                </p><p>
+                  * Leave the Zone_Owner field empty
+                </p><p>
+                  * Submit the form
+                </p><p>
+                  * This will create the DNS Zone for your VMs you will only need one
+                  when requesting an IP Address you do not need to create another zone
+                  for each one. One DNS Zone can hold several IP Addresses.
+                </p>
+              </mat-card-content>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>2. Verify your zone was created by clicking on the DNS: List Zones</mat-card-title>
+              </mat-card-header>
+              <img mat-card-image src="../../assets/SSIP2.PNG" >
+              <mat-card-content>
+                <p>
+                  * In RequestedZones field enter My Zones
+                </p><p>
+                  * Leave the OtherUser field empty
+                </p><p>
+                  * Submit the form
+                </p><p>
+                  * This will verify the DNS Zone you just created if you submitted and
+                  nothing showed then you need to go back and redo step 1.
+                </p>
+              </mat-card-content>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>3. Click on the Static IP: Request IP Address </mat-card-title>
+              </mat-card-header>
+              <img mat-card-image src="../../assets/SSIP3.PNG" >
+              <mat-card-content>
+                <p>
+                  * In the RequestedVLAN field enter the VLAN sent to your email.
+                </p><p>
+                  * In the Hostname field enter the vlab###### this # was sent to you
+                  in an email. Ex vlab030502
+                </p><p>
+                  * Leave the Description and the Address_Owner fields empty
+                </p><p>
+                  * Submit the form
+                </p><p>
+                  * You just requested your first IP Address.
+                </p>
+              </mat-card-content>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>4. Go to the Static IP: List Assignments </mat-card-title>
+              </mat-card-header>
+              <img mat-card-image src="../../assets/SSIP4.PNG" >
+              <mat-card-content>
+                <p>
+                  * In the requestdAddresses select My Addresses
+                </p><p>
+                  * Leave the OtherUser field empty
+                </p><p>
+                  * Submit the form
+                </p><p>
+                  * This shows a table of all the IP Addresses you have and the information to
+                   help the company see who the IP Addresses are assigned to. If nothing appears
+                   in the table go back to step 3 and request another IP Address.
+                </p>
+              </mat-card-content>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>5. Click on the DNS: create Record</mat-card-title>
+              </mat-card-header>
+              <img mat-card-image src="../../assets/SSIP5.PNG" >
+              <mat-card-content>
+                <p>
+                  *	In the Hostname field enter the vlab######
+                </p><p>
+                  * In the DNS_Zone enter the DNS Zone you created dom030500.lab
+                </p><p>
+                  * In the Target field enter the IP Address you requested for earlier
+                  that is linked with the Hostname you are using
+                </p><p>
+                  * In the RecordType field enter A
+                </p><p>
+                  * Submit the form
+                </p><p>
+                  * Congrats you just linked your IPAddress with the DNS Zone making the IPAddress usable in a VM
+                </p>
+              </mat-card-content>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>6.	Click DNS:List Zone Records</mat-card-title>
+              </mat-card-header>
+              <img mat-card-image src="../../assets/SSIP6.PNG" >
+              <mat-card-content>
+                <p>
+                  *	In the DNS_Zone field enter the DNS Zone you created dom######.lab
+                </p><p>
+                  * Submit the form
+                </p><p>
+                  * This is verifying the system has the record we created and that it is
+                  attached to the correct IP Address.
+                </p>
+              </mat-card-content>
+            </mat-card>
+
+
+
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Helpful hints">
+        <div class="center">
+          <p>* In order to work with Virtual Machines "VMs",
             we need to create a IP addresses and in order to
             create IP addresses we need a DNS zone.</p>
 
-          <p>If you are not quite sure what your DNS zone is check your email.
+          <p>* If you are not quite sure what your DNS zone is check your email.
               There you will be assigned a DNS name and numbers for your vlabs.
           </p>
-      </div>
-    </div>
+          <p>
+            * To add in another IP Address in your DNS Zone repeat steps 3, 4, 5, 6 .
+          </p>
+          <p>
+            * If you messed up on the IP Address request then just click on the Static
+            IP Return IP Address then enter the IP address you would like to return and
+            Submit the form.
+          </p>
+          <p>
+            * If you messed up on the DNS Zone creation then use the DNS: Delete Zone
+            then enter the DNS Zone you would like to delete and Submit the form.
+          </p>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
 
+
+
+    </div>
   </mat-drawer-content>
 </mat-drawer-container>

@@ -30,3 +30,7 @@ button{
   background-color: #244666;
   color: white;
 }
+
+.alert{
+  color: red;
+}
